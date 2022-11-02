@@ -60,7 +60,8 @@ export default function Game(props) {
         onSwipedRight: e => handleMove(0, 1),
         onSwipedUp: e => handleMove(-1, 0),
         onSwipedDown: e => handleMove(1, 0),
-        preventScrollOnSwipe: false,
+        preventScrollOnSwipe: true,
+        trackMouse: true
     })
 
     return (
@@ -90,7 +91,7 @@ export default function Game(props) {
             <div {...swipeHandlers}>
                 <div className={"d-flex justify-content-center"}>
                     <div className={"mt-2"} style={{position: 'relative'}}>
-                        <div className={"" + (finished ? " translucent" : "")}>
+                        <div className={"unselectable" + (finished ? " translucent" : "")}>
                             {
                                 field.map((row, i) =>
                                     <Row>

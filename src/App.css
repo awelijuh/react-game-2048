@@ -41,3 +41,10 @@
 .translucent {
   color: rgba(0,0,0,0.5);
 }
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
