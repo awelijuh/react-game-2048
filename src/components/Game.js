@@ -60,6 +60,7 @@ export default function Game(props) {
         onSwipedRight: e => handleMove(0, 1),
         onSwipedUp: e => handleMove(-1, 0),
         onSwipedDown: e => handleMove(1, 0),
+        preventScrollOnSwipe: false,
     })
 
     return (
